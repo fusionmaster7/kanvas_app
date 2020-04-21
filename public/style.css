@@ -1,3 +1,8 @@
+/*HOMEPAGE STYLING HERE -----------------------------------------------------------*/
+body {
+  background-color: #040d5a;
+}
+
 .back {
   position: absolute;
   top: 0;
@@ -8,34 +13,41 @@
   height: 100%;
   color: #fdee6a;
 }
+
 .container {
   margin-top: 200px;
   padding-left: 100px;
 }
+
 .sub-heading {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 30px;
   margin-bottom: 20px;
 }
+
 .heading {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 68px;
   margin-bottom: 60px;
 }
+
 #myspan {
   background-color: #e4ffcf;
   color: #fa5dbb;
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 .heading:hover {
   cursor: pointer;
 }
+
 .sub-heading:hover {
   cursor: pointer;
 }
+
 .btn {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
@@ -47,23 +59,145 @@
   background-color: #040d5a;
   color: white;
 }
+
 .btn:hover {
   cursor: pointer;
   color: #040d5a;
   background-color: #fa5dbb;
 }
+
 .btn:focus {
   outline: none;
 }
+/*DASHBOARD STYLING HERE---------------------------------------------------------*/
+
+.db-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.db-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+  color: #d4ffe5;
+}
+
+.db-heading:hover {
+  cursor: pointer;
+}
+
+.db-sep {
+  border: none;
+  height: 10px;
+  width: 500px;
+  margin-top: -5px;
+  background-color: #fa5dbb;
+}
+
+.db-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.db-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  border: none;
+  font-size: 26px;
+  background-color: #040d5a;
+  color: #fdee6a;
+  margin: 0px 10px;
+  padding: 5px 10px;
+}
+
+.db-btn:hover {
+  cursor: pointer;
+}
+
+.db-btn:focus {
+  outline: none;
+  border-bottom: 5px solid #fa5dbb;
+}
+
+.states {
+  margin-top: 30px;
+  background-color: #d4ffe5;
+  border-radius: 8px;
+}
+
+.states-table-header {
+  display: flex;
+  margin: 10px 0px;
+  justify-content: space-around;
+}
+
+.states-heading {
+  color: #040d5a;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.states-heading:hover {
+  cursor: pointer;
+}
+
+.state {
+  width: 25%;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#state-row {
+  padding: 5px 0px;
+}
+
+#state-row:hover {
+  background-color: #fdee6a;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding-left: 50px;
   }
+
   .sub-heading {
     font-size: 18px;
   }
+
   .heading {
     font-size: 32px;
     margin-bottom: 40px;
+  }
+
+  .db-heading {
+    font-size: 36px;
+  }
+
+  .db-sep {
+    width: 360px;
+  }
+
+  .db-btn {
+    font-size: 18px;
+  }
+
+  .db-btn:focus {
+    border-bottom-width: 4px;
   }
 }

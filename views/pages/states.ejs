@@ -1,0 +1,36 @@
+<!-- views/pages/states.ejs-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="db-container">
+      <%- include('../partials/header') %>
+      <div class="states">
+        <div class="states-table-header">
+          <div class="states-heading">State Name</div>
+          <div class="states-heading">Active</div>
+          <div class="states-heading">Confirmed</div>
+          <div class="states-heading">Deceased</div>
+          <div class="states-heading">Recovered</div>
+        </div>
+        <% states.forEach(element => { %>
+        <div class="states-table-header" id="state-row">
+          <div class="state"><%= element.name %></div>
+          <div class="state"><%= element.active %></div>
+          <div class="state"><%= element.confirmed %></div>
+          <div class="state"><%= element.deceased %></div>
+          <div class="state"><%= element.recovered %></div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <script type="text/javascript" src="/assets/dashboard.js"></script>
+  </body>
+</html>

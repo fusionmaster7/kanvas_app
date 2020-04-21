@@ -2,13 +2,14 @@
   "name": "covid",
   "version": "1.0.0",
   "description": "application for sms based COVID-19 Updates",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app"
+    "dev": "nodemon index"
   },
   "author": "Hardik Singh",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1"
