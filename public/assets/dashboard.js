@@ -1,3 +1,3 @@
 const clickHandler = () => {
-  console.log("Working");
+  document.getElementsByClassName("db-search")[0].style.display = "block";
 };

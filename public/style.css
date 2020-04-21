@@ -95,6 +95,10 @@ body {
   cursor: pointer;
 }
 
+#selected {
+  border-bottom: 5px solid #fa5dbb;
+}
+
 .db-sep {
   border: none;
   height: 10px;
@@ -129,10 +133,46 @@ body {
   border-bottom: 5px solid #fa5dbb;
 }
 
+.db-search {
+  text-align: center;
+  margin: 20px 0px;
+  display: none;
+}
+
+#search-state {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 300px;
+  padding: 5px;
+}
+
+.search-btn {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 10px;
+  color: #fa5dbb;
+  background-color: #d4ffe5;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+}
+
+.search-btn:focus {
+  outline: none;
+}
+
 .states {
   margin-top: 30px;
   background-color: #d4ffe5;
   border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .states-table-header {
@@ -171,6 +211,24 @@ body {
   cursor: pointer;
 }
 
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 24;
+  margin-bottom: 20px;
+}
+
+.footer:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding-left: 50px;
@@ -199,5 +257,13 @@ body {
 
   .db-btn:focus {
     border-bottom-width: 4px;
+  }
+
+  .states-heading {
+    font-size: 18px;
+  }
+
+  .state {
+    font-size: 16px;
   }
 }
