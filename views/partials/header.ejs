@@ -5,13 +5,14 @@
   <hr class="db-sep" />
 </div>
 <div class="db-btns">
-  <a href="/dashboard"><button class="db-btn">Graphs</button></a>
+  <a href="/dashboard"><button class="db-btn">Dashboard</button></a>
+  <a href="/graphs"><button class="db-btn">Graphs</button></a>
   <a href="/all"><button class="db-btn">All States</button></a>
   <button class="db-btn" onclick="clickHandler()">Search State</button>
   <a href="/"><button class="db-btn">Home</button></a>
 </div>
 <div class="db-search">
-  <form>
+  <form action="/search">
     <input type="text" id="search-state" placeholder="Enter your state here" name="state"></input>
     <button class="search-btn" type="submit">Search</button>
   </form>

@@ -1,0 +1,22 @@
+<!-- views/pages/graphs.ejs.ejs-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="db-container">
+      <%- include('../partials/header') %>
+      <canvas id="mychart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/assets/graph.js"></script>
+    <script type="text/javascript" src="assets/dashboard.js"></script>
+  </body>
+</html>

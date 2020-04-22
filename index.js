@@ -8,21 +8,7 @@ app.set("view-engine", ejs);
 app.use(express.static(`${__dirname}/public`));
 
 app.get("/dashboard", (req, res) => {
-  if (!req.query.state) {
-    res.render("pages/dashboard.ejs");
-  } else {
-    axios
-      .get("https://api.covid19india.org/v2/state_district_wise.json")
-      .then((resp) => {
-        const myState = resp.data.find((e) => e.state === req.query.state);
-        let districts = [];
-        myState.districtData.forEach((e) => {
-          let districtObj = { ...e };
-          districts.push(districtObj);
-        });
-        res.render("pages/state.ejs", { districts: districts });
-      });
-  }
+  res.render("pages/dashboard.ejs");
 });
 
 app.get("/all", (req, res) => {
@@ -49,4 +35,27 @@ app.get("/all", (req, res) => {
       res.render("pages/states.ejs", { states: states });
     });
 });
+
+app.get("/search", (req, res) => {
+  axios
+    .get("https://api.covid19india.org/v2/state_district_wise.json")
+    .then((resp) => {
+      const myState = resp.data.find((e) => e.state === req.query.state);
+      if (myState) {
+        let districts = [];
+        myState.districtData.forEach((e) => {
+          let districtObj = { ...e };
+          districts.push(districtObj);
+        });
+        res.render("pages/state.ejs", { districts: districts });
+      } else {
+        res.render("pages/error.ejs");
+      }
+    });
+});
+
+app.get("/graphs", (req, res) => {
+  res.render("pages/graphs.ejs");
+});
+
 app.listen(8000);

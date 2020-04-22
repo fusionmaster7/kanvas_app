@@ -229,6 +229,61 @@ body {
   cursor: pointer;
 }
 
+.error {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+#mychart {
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #d4ffe5;
+}
+
+.db-content {
+  border: 1px solid white;
+  padding: 20px;
+  background-color: #d4ffe5;
+  margin-top: 40px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.db-content:hover {
+  cursor: pointer;
+}
+
+.content-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  color: #040d5a;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-family: "Lato", sans-serif;
+  font-family: 800;
+  font-size: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#prec {
+  background-color: #fa5dbb;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding-left: 50px;
@@ -265,5 +320,9 @@ body {
 
   .state {
     font-size: 16px;
+  }
+
+  #mychart {
+    padding: 0px;
   }
 }
